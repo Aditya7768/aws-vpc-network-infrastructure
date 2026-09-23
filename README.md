@@ -32,10 +32,3 @@ aws configure                 # set your credentials/region first
 source scripts/00-variables.sh
 ./scripts/01-create-vpc.sh
 ./scripts/02-create-subnets.sh
-# ...continue in order
-
-Each script prints the resource IDs it creates — copy them into 00-variables.sh (or export them) before running the next script, since later stages depend on earlier IDs.
-
-Requirements
-AWS CLI v2, configured with credentials that can manage VPC/EC2 resources
-An existing EC2 key pair for SSH (used in 07-launch-instances.sh)
